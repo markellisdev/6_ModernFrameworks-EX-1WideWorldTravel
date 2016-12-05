@@ -1,22 +1,15 @@
 "use strict";
 
-app.controller("bookCtrl", function($scope){
+app.controller("bookCtrl", function($scope, GuideFactory){
 	$scope.books = [];
 
-	function getBooks(){
-		return new Promise(function(resolve, reject){
-			$.ajax({
-				url: "data/guides.json"
-			}).done(function(data){
-				console.log("data", data);
-				$scope.books = data;
-				console.log("book title", $scope.books.guides[1].title);
-				$scope.$apply();
+	GuideFactory.getBooks()
+	.then( (data) => {
+		$scope.books = data.guides; //data.guides to return array inside object
+		$scope.$apply();
 
-			});
-		});
-	}
-getBooks();
+	});
+
 });
 
 // ng-repeat="book in books"
