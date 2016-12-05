@@ -7,7 +7,7 @@ app.factory("GuideFactory", function() {
 		let books = [];
 		return new Promise(function(resolve, reject){
 			$.ajax({
-				url: "data/guides.json"
+				url: "../data/guides.json"
 			}).done(function(data){
 				console.log("data", data);
 				resolve(data); //only resolve data in factory
