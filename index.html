@@ -13,21 +13,13 @@
 
     	<h1>Wide World Travel Guides</h1>
 
-    	<div class=bookContainer ng-controller="bookCtrl"> <!-- Add this later ng-controller="bookCtrl"-->
-    		<input type="text" name="bookSearch" placeholder="Book Search" id="bookSearch">Search</input>
+    	<div class=bookContainer ng-view> <!-- Add this later ng-controller="bookCtrl"-->
 
-    		<div class="row" ng-repeat="book in books">
-    			<div class="bookCard"> <!-- ng-repeat="book in books.guides" -->
-    				<h3>{{book.title}}</h3>
-    				<p>{{book.type}}</p>
-    				<p>{{book.price}}</p>
-    			</div>
-    		</div>
 
     	</div>
-
+        <script src="lib/node_modules/angular/angular.min.js" type=""></script>
+        <script src="/lib/node_modules/angular-route/angular-route.min.js" type=""></script>
         <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="lib/node_modules/angular/angular.js"></script>
         <script type="text/javascript" src="app/app.js"></script>
         <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
         <script type="text/javascript" src="app/factories/GuideFactory.js"></script>

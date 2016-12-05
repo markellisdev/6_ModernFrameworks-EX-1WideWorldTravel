@@ -1,0 +1,10 @@
+<input type="text" name="bookSearch" placeholder="Book Search" id="bookSearch">Search</input>
+
+
+<div class="row" ng-repeat="book in books">
+	<div class="bookCard"> <!-- ng-repeat="book in books.guides" -->
+		<h3>{{book.title}}</h3>
+		<p>{{book.type}}</p>
+		<p>{{book.price}}</p>
+	</div>
+</div>
